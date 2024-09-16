@@ -1,8 +1,15 @@
-@import './utilities/colors.scss';
+@import '../assets/utilities/colors.scss';
 
 .app {
     background-color: $dark-background;
     color: $dark-text;
-    width: 100svw;
-    height: 100svh;
+    width: 100dvw;
+    height: 100dvh;
+
+    .nav {
+        position: fixed;
+        left: 50%;
+        transform: translate(-50%);
+        bottom: 0;
+    }
 }

@@ -1,0 +1,59 @@
+@import '../../../assets/utilities/colors.scss';
+
+.nav {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    gap: 2em;
+    margin: 2em;
+    padding: 0.5em 2em;
+    border-radius: 50px;
+    background-color: rgba($dark-primary, 10%);
+
+    .active {
+        background-color: $dark-primary;
+        border-radius: 10px;
+        padding: 0.4em;
+        color: rgba($light-text, 80%);
+        animation: not-hover-active 0.2s ease-in-out forwards;
+
+        font-weight: bold;
+    }
+
+    .active:hover {
+        animation: hover-active 0.2s ease-in-out forwards;
+    }
+
+    .fa-solid {
+        background-color: $dark-primary;
+        border-radius: 10px;
+        padding: 0.4em;
+        color: rgba($dark-secondary, 80%);
+        animation: not-hover-active 0.2s ease-in-out forwards;
+        width: 20px;
+        text-align: center;
+    }
+
+    .fa-solid:hover {
+        animation: hover-active 0.2s ease-in-out forwards;
+    }
+}
+
+@keyframes hover-active {
+    from {
+        color: rgba($dark-secondary, 80%);
+    }
+    to {
+        color: $dark-secondary;
+    }
+}
+
+@keyframes not-hover-active {
+    from {
+        color: $dark-secondary;
+    }
+    to {
+        color: rgba($dark-secondary, 80%);
+    }
+}

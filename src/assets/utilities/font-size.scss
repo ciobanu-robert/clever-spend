@@ -1,0 +1,13 @@
+@use "sass:math";
+
+$font-size: 100%;
+$ratio: 1.333;
+
+$h8: math.div($font-size, $ratio);
+$h7: $font-size;
+$h6: $font-size * $ratio;
+$h5: $h6 * $ratio;
+$h4: $h5 * $ratio;
+$h3: $h4 * $ratio;
+$h2: $h3 * $ratio;
+$h1: $h2 * $ratio;
