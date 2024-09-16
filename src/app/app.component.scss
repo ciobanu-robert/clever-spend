@@ -1,0 +1,8 @@
+@import './utilities/colors.scss';
+
+.app {
+    background-color: $dark-background;
+    color: $dark-text;
+    width: 100svw;
+    height: 100svh;
+}

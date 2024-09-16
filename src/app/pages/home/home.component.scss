@@ -1,0 +1,51 @@
+@import '../../utilities/colors.scss';
+
+.page {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    width: 100svw;
+    height: 100svh;
+
+    .text {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        gap: 0.5em;
+        margin: 1em;
+        max-width: 300px;
+
+        .name {
+            background: linear-gradient(to right, $dark-primary, $dark-accent);
+            background-clip: text;
+            -webkit-text-fill-color: transparent;
+            font-weight: bold;
+        }
+    }
+
+    img {
+        width: 300px;
+        height: 300px;
+        margin: 1em;
+        object-fit: cover;
+        object-position: center;
+    }
+}
+
+@media (min-width: 40em) {
+    .page{
+        .text {
+            gap: 1em;
+            margin: 2em;
+            max-width: 500px;
+        }
+
+        img {
+            width: 500px;
+            height: 500px;
+            margin: 2em;
+        }
+    }
+}
