@@ -1,5 +1,8 @@
-<div class="app">
-    <app-home></app-home>
+<div 
+    class="app"
+    [ngClass]="this.mode.dark ? 'dark' : 'light'"
+>
+    <router-outlet></router-outlet>
     <div class="nav">
         <app-nav></app-nav>
     </div>

@@ -1,9 +1,15 @@
-<div class="nav">
+<div 
+    class="nav"
+    [ngClass]="this.mode.dark ? 'dark' : 'light'"
+>
     <h6 class="active">Home</h6>
     <h6>Login</h6>
     <h6>Register</h6>
-    <h6 (click)="onMode()">
-        <i *ngIf="dark" class="fa-solid fa-sun"></i>
-        <i *ngIf="!dark" class="fa-solid fa-moon"></i>
+    <h6 
+        class="active"
+        (click)="this.mode.change()"
+    >
+        <i *ngIf="this.mode.dark" class="fa-solid fa-sun"></i>
+        <i *ngIf="!this.mode.dark" class="fa-solid fa-moon"></i>
     </h6>
 </div>

@@ -12,4 +12,10 @@
         transform: translate(-50%);
         bottom: 0;
     }
+
+}
+
+.light {
+    background-color: $light-background;
+    color: $light-text;
 }

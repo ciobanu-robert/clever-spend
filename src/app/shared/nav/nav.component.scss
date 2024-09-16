@@ -10,14 +10,18 @@
     padding: 0.5em 2em;
     border-radius: 50px;
     background-color: rgba($dark-primary, 10%);
+    text-align: center;
+
+    h6:hover {
+        cursor: pointer;
+    }
 
     .active {
         background-color: $dark-primary;
         border-radius: 10px;
         padding: 0.4em;
-        color: rgba($light-text, 80%);
+        color: rgba($light-secondary, 80%);
         animation: not-hover-active 0.2s ease-in-out forwards;
-
         font-weight: bold;
     }
 
@@ -26,17 +30,21 @@
     }
 
     .fa-solid {
-        background-color: $dark-primary;
-        border-radius: 10px;
-        padding: 0.4em;
-        color: rgba($dark-secondary, 80%);
-        animation: not-hover-active 0.2s ease-in-out forwards;
         width: 20px;
-        text-align: center;
     }
+}
 
-    .fa-solid:hover {
-        animation: hover-active 0.2s ease-in-out forwards;
+.light {
+    background-color: rgba($light-primary, 10%);
+    color: $light-text;
+
+    .active {
+        background-color: $light-primary;
+        color: rgba($light-secondary, 80%);
+        animation: not-hover-active-light 0.2s ease-in-out forwards;
+    }
+    .active:hover {
+        animation: hover-active-light 0.2s ease-in-out forwards;
     }
 }
 
@@ -55,5 +63,23 @@
     }
     to {
         color: rgba($dark-secondary, 80%);
+    }
+}
+
+@keyframes hover-active-light {
+    from {
+        color: rgba($light-secondary, 80%);
+    }
+    to {
+        color: $light-secondary;
+    }
+}
+
+@keyframes not-hover-active-light {
+    from {
+        color: $light-secondary;
+    }
+    to {
+        color: rgba($light-secondary, 80%);
     }
 }

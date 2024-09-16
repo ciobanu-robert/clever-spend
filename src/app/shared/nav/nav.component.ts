@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import { DarkModeService } from '../../services/dark-mode.service';
 
 @Component({
   selector: 'app-nav',
@@ -7,9 +8,5 @@ import { Component } from '@angular/core';
   styleUrl: './nav.component.scss'
 })
 export class NavComponent {
-  dark = true;
-
-  onMode() {
-    this.dark = !this.dark
-  }
+  constructor(public mode: DarkModeService) {}
 }

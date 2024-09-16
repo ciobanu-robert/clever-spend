@@ -34,6 +34,17 @@
     }
 }
 
+.light {
+    .text {
+        .name {
+            background: linear-gradient(to right, $light-primary, $light-accent);
+            background-clip: text;
+            -webkit-text-fill-color: transparent;
+            font-weight: bold;
+        }
+    }
+}
+
 @media (min-width: 40em) {
     .page{
         .text {

@@ -3,6 +3,7 @@ import { CommonModule } from '@angular/common';
 import { RouterOutlet } from '@angular/router';
 import { PagesModule } from "./pages/pages.module";
 import { SharedModule } from './shared/shared.module';
+import { DarkModeService } from './services/dark-mode.service';
 
 @Component({
   selector: 'app-root',
@@ -17,5 +18,5 @@ import { SharedModule } from './shared/shared.module';
   styleUrl: './app.component.scss'
 })
 export class AppComponent {
-  title = 'clever-spend';
+  constructor(public mode:DarkModeService) {}
 }
