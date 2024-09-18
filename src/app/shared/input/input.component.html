@@ -3,25 +3,42 @@
     [ngClass]="this.mode.dark ? 'dark' : 'light'"
 >
     <p>{{ name }}</p>
+
+    <i 
+        *ngIf="name == 'Username'"
+        class="fa-solid fa-user"
+    >
+    </i>
     <i 
         *ngIf="name == 'Email'"
         class="fa-solid fa-envelope"
     >
     </i>
     <i 
-        *ngIf="name == 'Password'"
+        *ngIf="
+            name == 'Password' ||
+            name == 'Confirm password'
+        "
         class="fa-solid fa-lock"
     >
     </i>
     <input [type]="type">
     <i 
-        *ngIf="name == 'Password' && type == 'password'"
+        *ngIf=" (
+            name == 'Password' ||
+            name == 'Confirm password'
+        ) &&
+            type == 'password'"
         class="fa-solid fa-eye"
         (click)="visible()"
     >
     </i>
     <i 
-        *ngIf="name == 'Password' && type == 'text'"
+        *ngIf="(
+            name == 'Password' || 
+            name == 'Confirm password'
+            ) &&
+            type == 'text'"
         class="fa-solid fa-eye-slash"
         (click)="visible()"
     >

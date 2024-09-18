@@ -1,0 +1,40 @@
+@import '../../../assets/utilities/colors.scss';
+
+.page {
+    height: 100dvh;
+    width: 100dvw;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+
+    .register {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        gap: 1em;
+        padding: 4em 2em;
+        background-color: rgba($dark-primary, 10%);
+        border-radius: 20px;
+
+        .form {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            gap: 1em;
+    
+            .button {
+                align-self: center;
+            }
+        }
+    }
+
+    
+}
+
+.light {
+    .login {
+        background-color: rgba($light-primary, 10%);
+    }
+}

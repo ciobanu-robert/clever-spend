@@ -1,1 +1,40 @@
-<p>register works!</p>
+<div 
+    class="page"
+    [ngClass]="this.mode.dark ? 'dark': 'light'"
+>
+    <div class="register">
+        <h5>New here?</h5>
+        <p>Create an account to start your journey.</p>
+        <form class="form">
+
+            <app-input 
+                name="Username"
+            >
+            </app-input>
+
+            <app-input 
+                name="Email"
+                type="email"
+            >
+            </app-input>
+
+            <app-input 
+                name="Password"
+                type="password"
+            >
+            </app-input>
+            <app-input 
+                name="Confirm password"
+                type="password"
+            >
+            </app-input>
+
+            <app-button 
+                text="Register"
+                class="button"
+            >
+
+            </app-button>
+        </form>
+    </div>
+</div>

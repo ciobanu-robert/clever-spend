@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import { DarkModeService } from '../../services/dark-mode.service';
 
 @Component({
   selector: 'app-register',
@@ -7,5 +8,5 @@ import { Component } from '@angular/core';
   styleUrl: './register.component.scss'
 })
 export class RegisterComponent {
-
+  constructor(public mode:DarkModeService) {}
 }
