@@ -1,0 +1,54 @@
+@import '../../../assets/utilities/colors.scss';
+@import '../../../assets/utilities/font-size.scss';
+
+.input {
+    position: relative;
+
+    .fa-solid {
+        position: absolute;
+        top: 50%;
+        left: 1em;
+        transform: translate(-50%, 10%);
+    }
+
+    .fa-eye{
+        left: auto;
+        right: 0;
+        cursor: pointer;
+        text-align: center;
+    }
+
+    .fa-eye-slash {
+        left: auto;
+        right: -0.1em;
+        cursor: pointer;
+        text-align: center;
+    }
+
+    input {
+        border-radius: 10px;
+        border: 1px solid $dark-primary;
+        background-color: $dark-background;
+        color: $dark-text;
+        font-size: $font-size;
+        padding: 0 2em 0 1.7em;
+        height: 25px;
+        width: 250px;
+    }
+}
+
+.light {
+    input {
+        border: 1px solid $light-primary;
+        background-color: $light-background;
+        color: $light-text;    
+    }
+}
+
+@media (min-width: 40em) {
+    .input {
+        input {
+            width: 300px;
+        }
+    }
+}

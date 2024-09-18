@@ -1,1 +1,43 @@
-<p>login works!</p>
+<div 
+    class="page"
+    [ngClass]="this.mode.dark ? 'dark': 'light'"
+>
+    <div class="login">
+        <h5>Welcome back!</h5>
+        <p>Please enter your details.</p>
+        <form class="form">
+            <app-input 
+                name="Email"
+                type="email"
+            >
+            </app-input>
+
+            <app-input 
+                name="Password"
+                type="password"
+            >
+            </app-input>
+
+            <div class="remember-forgot">
+                <app-checkbox
+                    text = "Remember me"
+                >
+                </app-checkbox>
+                
+                <a 
+                    href="/"
+                    class="forgot"
+                >
+                    Forgot password
+                </a>
+            </div>
+
+            <app-button 
+                text="Login"
+                class="button"
+            >
+
+            </app-button>
+        </form>
+    </div>
+</div>

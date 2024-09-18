@@ -10,6 +10,7 @@
     padding: 0.5em 2em;
     border-radius: 50px;
     background-color: rgba($dark-primary, 10%);
+    backdrop-filter: blur(2px);
     text-align: center;
 
     h6:hover {

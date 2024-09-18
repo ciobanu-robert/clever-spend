@@ -1,0 +1,75 @@
+@import '../../../assets/utilities/colors.scss';
+@import '../../../assets/utilities/font-size.scss';
+
+.button {
+    button {
+        color: $dark-text;
+        background-color: $dark-accent;
+        animation: not-hover 0.5s ease-in-out forwards;
+        border: none;
+        border-radius: 10px;
+        padding: 0.5em 1em;
+        font-size: $font-size;
+        cursor: pointer;
+    }
+
+    button:hover {
+        animation: hover 0.5s ease-in-out forwards;
+    }
+}
+
+.light {
+    button {
+        color: $light-text;
+        background-color: $light-accent;
+        animation: not-hover-light 0.5s ease-in-out forwards;
+    }
+
+    button:hover {
+        animation: hover-light 0.5s ease-in-out forwards;
+    }
+}
+
+@keyframes hover {
+    from {
+        color: $dark-text;
+        background-color: $dark-accent;
+    }
+    to {
+        color: $dark-accent;
+        background-color: $dark-text;
+    }
+}
+
+@keyframes not-hover {
+    from {
+        color: $dark-accent;
+        background-color: $dark-text;
+    }
+    to {
+        color: $dark-text;
+        background-color: $dark-accent;
+    }
+}
+
+@keyframes hover-light {
+    from {
+        color: $light-text;
+        background-color: $light-accent;
+    }
+    to {
+        color: $light-accent;
+        background-color: $light-text;
+    }
+}
+
+@keyframes not-hover-light {
+    from {
+        color: $light-accent;
+        background-color: $light-text;
+    }
+    to {
+        color: $light-text;
+        background-color: $light-accent;
+    }
+}
