@@ -1,0 +1,31 @@
+<div 
+    class="page"
+    [ngClass]="this.mode.dark ? 'dark' : 'light'"
+>
+    <div class="partners">
+        <app-partner 
+            *ngFor="let partner of partners"
+            [status]= partner.status
+            [image] = partner.image
+            [name] = partner.name
+            [income] = partner.income
+        >
+
+        </app-partner>
+        <app-partner 
+            *ngIf="partners.length == 1" 
+            [add]=true
+        >
+        </app-partner>
+    </div>
+
+    <app-select
+        class="split"
+        name="Split"
+        [options]="split"
+    >
+    </app-select>
+
+    <app-fixed-expenses-table [fixed]="fixed"></app-fixed-expenses-table>
+
+</div>

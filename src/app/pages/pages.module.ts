@@ -6,6 +6,9 @@ import { LoginComponent } from './login/login.component';
 import { RegisterComponent } from './register/register.component';
 import { ForgotPasswordComponent } from './forgot-password/forgot-password.component';
 import { ResetPasswordComponent } from './reset-password/reset-password.component';
+import { FixedExpensesComponent } from './fixed-expenses/fixed-expenses.component';
+import { DailyExpensesComponent } from './daily-expenses/daily-expenses.component';
+import { SettingsComponent } from './settings/settings.component';
 
 
 
@@ -16,6 +19,9 @@ import { ResetPasswordComponent } from './reset-password/reset-password.componen
     RegisterComponent,
     ForgotPasswordComponent,
     ResetPasswordComponent,
+    FixedExpensesComponent,
+    DailyExpensesComponent,
+    SettingsComponent,
   ],
   imports: [
     CommonModule,

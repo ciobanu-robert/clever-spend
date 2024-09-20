@@ -1,0 +1,54 @@
+<div 
+    class="table"
+    [ngClass]="this.mode.dark ? 'dark' : 'light'"
+>
+    <table>
+        <thead>
+            <tr>
+                <th>Fixed expenses</th>
+                <th>Household</th>
+                <th>Partner1</th>
+                <th>Partner2</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr 
+                *ngFor="let expense of fixed"
+            >
+                <td>{{ expense.name }}</td>
+                <td>{{ expense.household }}</td>
+                <td>{{ expense.partner1 }}</td>
+                <td>{{ expense.partner2 }}</td>
+            </tr>
+            <tr class="add">
+                <td 
+                    class="button"
+                    colspan="4"
+                >
+                    <i class="fa-solid fa-plus"></i>
+                </td>
+            </tr>
+        </tbody>
+        <tfoot class="total">
+            <tr>
+                <td>Total</td>
+                <td>2350</td>
+                <td>1343</td>
+                <td>1007</td>
+            </tr>
+
+            <tr>
+                <td>Daily expenses</td>
+                <td>1150</td>
+                <td>657</td>
+                <td>493</td>
+            </tr>
+        </tfoot>
+    </table>
+
+    <app-button
+        class="button"
+        text="Calculate"
+    >
+    </app-button>
+</div>

@@ -5,6 +5,9 @@ import { RouterLink, RouterLinkActive } from '@angular/router';
 import { InputComponent } from './input/input.component';
 import { ButtonComponent } from './button/button.component';
 import { CheckboxComponent } from './checkbox/checkbox.component';
+import { PartnerComponent } from './partner/partner.component';
+import { SelectComponent } from './select/select.component';
+import { FixedExpensesTableComponent } from './fixed-expenses-table/fixed-expenses-table.component';
 
 
 
@@ -14,6 +17,9 @@ import { CheckboxComponent } from './checkbox/checkbox.component';
     InputComponent,
     ButtonComponent,
     CheckboxComponent,
+    PartnerComponent,
+    SelectComponent,
+    FixedExpensesTableComponent,
   ],
   imports: [
     CommonModule,
@@ -25,6 +31,9 @@ import { CheckboxComponent } from './checkbox/checkbox.component';
     InputComponent,
     ButtonComponent,
     CheckboxComponent,
+    PartnerComponent,
+    SelectComponent,
+    FixedExpensesTableComponent,
   ]
 })
 export class SharedModule { }

@@ -1,0 +1,23 @@
+<div 
+    [ngClass]="this.mode.dark ? 'dark' : 'light'"
+>
+    <p>{{ name }}</p>
+    <div class="select">
+        <select>
+            <option 
+                disabled 
+                selected
+            >
+                Select
+            </option>
+
+            <option 
+                *ngFor="let option of options"
+            >
+                {{ option}}
+            </option>
+
+          </select>
+          <i class="fa-solid fa-caret-down"></i>
+    </div>
+</div>

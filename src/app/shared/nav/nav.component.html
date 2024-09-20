@@ -2,7 +2,7 @@
     class="nav"
     [ngClass]="this.mode.dark ? 'dark' : 'light'"
 >
-    <h6 
+    <!-- <h6 
         routerLink="/home"
         routerLinkActive="active"
     >
@@ -19,7 +19,29 @@
         routerLinkActive="active"
     >
         Register
+    </h6> -->
+
+    <h6 
+        routerLink="/fixed"
+        routerLinkActive="active"
+    >
+        Fixed
     </h6>
+
+    <h6 
+        routerLink="/daily"
+        routerLinkActive="active"
+    >
+        Daily
+    </h6>
+
+    <h6 
+        routerLink="/settings"
+        routerLinkActive="active"
+    >
+        Settings
+    </h6>
+
     <h6 
         class="active"
         (click)="this.mode.change()"

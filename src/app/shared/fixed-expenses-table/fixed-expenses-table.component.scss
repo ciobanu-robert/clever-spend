@@ -1,0 +1,78 @@
+@import '../../../assets/utilities/colors.scss';
+
+.table {
+    background-color: rgba($dark-primary, 10%);
+    border-radius: 10px;
+    padding: 1em;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-end;
+    gap: 1em;
+    margin-bottom: 5.5em;
+
+    table {
+        border-collapse: collapse;
+        th {
+            border-bottom: 1px solid $dark-accent;
+            text-align: left;
+            width: 60px;
+            color: $dark-accent;
+        }
+        th:nth-child(1) {
+            width: 60px;
+        }
+        
+        tbody {
+            .add {
+                text-align: center;
+                width: 100%;
+            }
+            .add:hover {
+                cursor: pointer;
+                background-color: rgba($dark-primary, 10%);
+            }
+        }
+        
+        tfoot {
+            color: $dark-primary;
+        }
+    }
+}
+
+.light.table {
+    background-color: rgba($light-primary, 10%);
+
+    table {
+        th {
+            border-bottom: 1px solid $light-accent;
+            color: $light-accent;
+        }
+
+        tbody {
+            .add:hover {
+                background-color: rgba($light-primary, 10%);
+            }
+        }
+
+        tfoot {
+            color: $light-primary;
+        }
+    }
+}
+
+@media (min-width: 40em) {
+    .table {
+        margin-bottom: 7.5em;
+
+        table {
+            th:nth-child(1) {
+                width: 150px;
+            }
+
+            th {
+                width: 100px;
+            }
+        }
+    }
+}

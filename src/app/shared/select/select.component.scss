@@ -1,0 +1,44 @@
+@import '../../../assets/utilities/colors.scss';
+@import '../../../assets/utilities/font-size.scss';
+
+.select {
+    position: relative;    
+    height: 25px;
+    width: 250px;
+
+    select {
+        appearance: none;
+        box-shadow: none;
+        background-image: none;
+        cursor: pointer;
+        border-radius: 10px;
+        border: 1px solid $dark-primary;
+        background-color: $dark-background;
+        color: $dark-text;
+        font-size: $font-size;
+        padding: 0 0.5em;
+        height: 25px;
+        width: 250px;
+    }
+
+    .fa-solid {
+        position: absolute;
+        top: 50%;
+        left: auto;
+        right: 0.2em;
+        transform: translate(-50%, -50%);
+        cursor: pointer;
+        text-align: center;
+    }
+
+}
+
+.light {
+    .select {
+        select {
+            border: 1px solid $light-primary;
+            background-color: $light-background;
+            color: $light-text;
+        }
+    }
+}

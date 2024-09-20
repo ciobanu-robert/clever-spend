@@ -1,0 +1,22 @@
+<div
+    [ngClass]="this.mode.dark ? 'dark' : 'light'"
+>
+    <div 
+        *ngIf="!add"
+        class="partner"
+    >
+        <h5>{{ status }}</h5>
+        <div class="profile">
+            <i class="fa-solid fa-user image"></i>
+            <p>{{ name }}</p>
+        </div>
+        <p>Income: {{ income }}</p>
+    </div>
+    
+    <div 
+        *ngIf="add"
+        class="partner add"
+    >
+        <i class="fa-solid fa-user-plus"></i>
+    </div>
+</div>
