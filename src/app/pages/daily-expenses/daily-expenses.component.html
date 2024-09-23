@@ -1,1 +1,112 @@
-<p>daily-expenses works!</p>
+<div 
+    class="page"
+    [ngClass]="this.mode.dark ? 'dark' : 'light'"
+>
+    <div class="partners">
+        <app-partner 
+            *ngFor="let partner of partners"
+            [status]= partner.status
+            [image] = partner.image
+            [name] = partner.name
+            [balance] = partner.balance
+        >
+        </app-partner>
+    </div>
+
+    <div class="date">
+        <mat-form-field class="form">
+            <input matInput [matDatepicker]="dp" [formControl]="date" >
+            <mat-datepicker-toggle matIconSuffix [for]="dp"></mat-datepicker-toggle>
+            <mat-datepicker #dp
+                            disabled="false"
+                            startView="multi-year"
+                            (monthSelected)="setMonthAndYear($event, dp)"
+                            panelClass="date-picker">
+            </mat-datepicker>
+          </mat-form-field>
+        <div>
+            <p>
+                Date
+            </p>
+            <input disabled matInput [value]="valueDate()">
+        </div>
+        <app-button #dp
+            type="icon"
+            text="fa-calendar"
+            mat-raised-button 
+            (click)="dp.open()"
+        ></app-button>
+    </div>
+
+    <div class="add">
+        <form class="form">
+            <div>
+                <p>Day</p>
+                <input 
+                    class="day"
+                    type="number" 
+                    min="0"
+                    max="30"
+                    inputmode="numeric" 
+                    pattern="[0-9]*"
+                >
+            </div>
+            <div>
+                <p>Item</p>
+                <input 
+                    class="name"
+                    type="text"
+                >
+            </div>
+            <div>
+                <p>Value</p>
+                <input 
+                    class="value"
+                    type="number" 
+                    min="0" 
+                    inputmode="decimal" 
+                    pattern="[0-9]*"
+                >
+            </div>
+            <app-button
+                text="fa-plus"
+                type="icon"
+            >
+            </app-button>
+        </form>
+    </div>
+
+    <div class="table">
+        <table>
+            <thead>
+                <tr>
+                    <th>Daily spending</th>
+                    <th>Item</th>
+                    <th>You</th>
+                    <th>Partner</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr *ngFor="let day of days;">
+                    <td
+                        *ngIf="day <= 9"
+                    >
+                        0{{ day }}/01/2024
+                    </td>
+                    <td
+                        *ngIf="day > 9"
+                    >
+                        {{ day }}/01/2024
+                </td>
+                    <td>
+
+                    </td>
+                    <td>
+
+                    </td>
+                    <td></td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+</div>

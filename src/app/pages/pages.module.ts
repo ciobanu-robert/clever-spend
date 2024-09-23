@@ -9,6 +9,10 @@ import { ResetPasswordComponent } from './reset-password/reset-password.componen
 import { FixedExpensesComponent } from './fixed-expenses/fixed-expenses.component';
 import { DailyExpensesComponent } from './daily-expenses/daily-expenses.component';
 import { SettingsComponent } from './settings/settings.component';
+import { MatFormFieldModule } from '@angular/material/form-field';
+import { MatInputModule } from '@angular/material/input';
+import { MatDatepickerModule } from '@angular/material/datepicker';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 
 
 
@@ -26,6 +30,11 @@ import { SettingsComponent } from './settings/settings.component';
   imports: [
     CommonModule,
     SharedModule,
+    MatFormFieldModule,
+    MatInputModule,
+    MatDatepickerModule,
+    FormsModule,
+    ReactiveFormsModule,
   ],
   exports: []
 })

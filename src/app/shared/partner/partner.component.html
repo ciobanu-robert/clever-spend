@@ -10,7 +10,16 @@
             <i class="fa-solid fa-user image"></i>
             <p>{{ name }}</p>
         </div>
-        <p>Income: {{ income }}</p>
+        <p
+            *ngIf="income"
+        >
+            Income: {{ income }}
+        </p>
+        <p
+        *ngIf="balance"
+    >
+        Balance: {{ balance }}
+    </p>
     </div>
     
     <div 

@@ -16,4 +16,5 @@ constructor(public mode: DarkModeService) {}
 @Input() image = '';
 @Input() name = '';
 @Input() income = 0;
+@Input() balance = 0;
 }

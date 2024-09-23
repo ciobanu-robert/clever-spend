@@ -7,7 +7,7 @@
     justify-content: center;
     align-items: center;
     gap: 1em;
-
+    
     .partners {
         display: flex;
         flex-direction: row;
@@ -20,7 +20,7 @@
 
     .split {
         background-color: rgba($dark-primary, 10%);
-        width: 340px;
+        width: 80vw;
         border-radius: 10px;
         display: flex;
         justify-content: center;

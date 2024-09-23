@@ -2,5 +2,14 @@
     class="button"
     [ngClass]="this.mode.dark ? 'dark': 'light'"
 >
-    <button>{{text}}</button>
+    <button
+        *ngIf="type == 'text'"
+    >
+        {{text}}
+    </button>
+    <button
+        *ngIf="type == 'icon'"
+    >    
+        <i class="fa-solid" [ngClass]="text"></i>
+    </button>
 </div>

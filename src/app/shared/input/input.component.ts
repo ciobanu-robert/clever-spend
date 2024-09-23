@@ -11,7 +11,7 @@ import e from 'express';
 export class InputComponent {
   constructor(public mode: DarkModeService) {}
 
-  @Input() name = 'text';
+  @Input() name = '';
   @Input() type = 'text';
 
   visible() {

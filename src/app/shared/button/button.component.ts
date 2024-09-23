@@ -11,4 +11,5 @@ export class ButtonComponent {
   constructor(public mode: DarkModeService) {}
 
 @Input() text = 'button';
+@Input() type = 'text';
 }
