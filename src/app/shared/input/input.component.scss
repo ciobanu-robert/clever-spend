@@ -27,12 +27,12 @@
 
     input {
         border-radius: 10px;
-        border: 1px solid $dark-primary;
+        border-bottom: 1px solid $dark-primary;
         background-color: $dark-background;
         color: $dark-text;
         font-size: $font-size;
         padding: 0 2em 0 1.7em;
-        height: 25px;
+        height: 30px;
         width: 250px;
     }
 }

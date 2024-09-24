@@ -8,7 +8,13 @@ import { CheckboxComponent } from './checkbox/checkbox.component';
 import { PartnerComponent } from './partner/partner.component';
 import { SelectComponent } from './select/select.component';
 import { FixedExpensesTableComponent } from './fixed-expenses-table/fixed-expenses-table.component';
-
+import { MatFormFieldModule } from '@angular/material/form-field';
+import { MatInputModule } from '@angular/material/input';
+import { MatDatepickerModule } from '@angular/material/datepicker';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
+import { DatePickerComponent } from './date-picker/date-picker.component';
+import { AddItemComponent } from './add-item/add-item.component';
+import { DailyExpensesTableComponent } from './daily-expenses-table/daily-expenses-table.component';
 
 
 @NgModule({
@@ -20,11 +26,19 @@ import { FixedExpensesTableComponent } from './fixed-expenses-table/fixed-expens
     PartnerComponent,
     SelectComponent,
     FixedExpensesTableComponent,
+    DatePickerComponent,
+    AddItemComponent,
+    DailyExpensesTableComponent,
   ],
   imports: [
     CommonModule,
     RouterLink,
     RouterLinkActive,
+    MatFormFieldModule,
+    MatInputModule,
+    MatDatepickerModule,
+    FormsModule,
+    ReactiveFormsModule,
   ],
   exports: [
     NavComponent,
@@ -34,6 +48,9 @@ import { FixedExpensesTableComponent } from './fixed-expenses-table/fixed-expens
     PartnerComponent,
     SelectComponent,
     FixedExpensesTableComponent,
+    DatePickerComponent,
+    AddItemComponent,
+    DailyExpensesTableComponent,
   ]
 })
 export class SharedModule { }

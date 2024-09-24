@@ -1,0 +1,36 @@
+<div 
+    class="table"
+    [ngClass]="this.mode.dark ? 'dark' : 'light'"
+>
+    <table>
+        <thead>
+            <tr>
+                <th>Daily spending</th>
+                <th>Item</th>
+                <th>You</th>
+                <th>Partner</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr *ngFor="let day of days;">
+                <td
+                    *ngIf="day <= 9"
+                >
+                    0{{ day }}/01/2024
+                </td>
+                <td
+                    *ngIf="day > 9"
+                >
+                    {{ day }}/01/2024
+            </td>
+                <td>
+
+                </td>
+                <td>
+
+                </td>
+                <td></td>
+            </tr>
+        </tbody>
+    </table>
+</div>

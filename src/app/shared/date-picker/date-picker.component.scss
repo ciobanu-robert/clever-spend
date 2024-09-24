@@ -1,0 +1,118 @@
+@import '../../../assets/utilities/colors.scss';
+@import '../../../assets/utilities/font-size.scss';
+
+@mixin lighten() {
+    --text: #0c0c0d;
+    --background: #343f554D;
+    --primary: #343f55;
+    --secondary: #3a4d734D;
+    --accent: #4060a0;
+}
+
+@mixin darken() {
+    --text: #f2f2f3;
+    --background: #aab5cb4D;
+    --primary: #aab5cb;
+    --secondary: #8c9fc54D;
+    --accent: #5f7fbf;
+}
+
+.date {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: flex-end;
+    background-color: rgba($dark-primary, 10%);
+    padding: 1em;
+    border-radius: 10px;
+    width: 80vw;
+    gap: 1em;
+    
+    .form {
+        display: block;
+        opacity: 0;
+        position: absolute;
+        top: 13.5em;
+        margin-left: -3em;
+    }
+
+    input {
+        border: none;
+        border-radius: 10px;
+        border-bottom: 1px solid $dark-primary;
+        background-color: $dark-background;
+        color: $dark-text;
+        font-size: $font-size;
+        height: 30px;
+    }
+}
+
+::ng-deep .light {
+    @include lighten();
+}
+::ng-deep .dark {
+    @include darken()
+}
+
+::ng-deep .mat-datepicker-content{
+    background-color: transparent !important;
+    backdrop-filter: blur(5px);
+    border-radius: 10px !important;
+}
+
+::ng-deep .mat-mdc-button:not(:disabled), .mat-calendar-arrow {
+    color: var(--text) !important;
+}
+
+::ng-deep .mat-calendar-arrow {
+    fill: var(--text) !important;
+}
+
+@media (hover: hover) {
+    ::ng-deep .mat-calendar-body-cell:not(.mat-calendar-body-disabled):hover>.mat-calendar-body-cell-content:not(.mat-calendar-body-selected):not(.mat-calendar-body-comparison-identical) {
+        background-color: var(--secondary) !important;
+    }
+}
+
+::ng-deep .mat-datepicker-content 
+.mat-calendar-previous-button:not(.mat-mdc-button-disabled), 
+.mat-datepicker-content 
+.mat-calendar-next-button:not(.mat-mdc-button-disabled) {
+    color: var(--text) !important;
+}
+
+::ng-deep .mat-datepicker-content .mat-calendar-next-button:not(.mat-mdc-button-disabled) {
+    color: var(--text) !important;
+}
+
+::ng-deep .mat-calendar-table-header th {
+    color: var(--text) !important;
+}
+
+::ng-deep .mat-calendar-body-cell-content {
+    color: var(--text) !important;
+}
+
+::ng-deep .mat-calendar-body-selected {
+    background-color: var(--accent) !important;
+}
+
+::ng-deep .mat-calendar-body-label {
+    color: var(--primary) !important;
+}
+
+.light {
+    background-color: rgba($light-primary, 10%);
+
+    input {
+        border-bottom: 1px solid $light-primary;
+        background-color: $light-background;
+        color: $light-text;
+    }
+}
+
+@media (min-width: 40em) {
+    .date {
+        width: 460px;
+    }
+}

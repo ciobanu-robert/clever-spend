@@ -1,0 +1,66 @@
+@import '../../../assets/utilities/colors.scss';
+@import '../../../assets/utilities/font-size.scss';
+
+.add {
+    .form {
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        align-items: flex-end;
+        gap: 1em;
+        background-color: rgba($dark-primary, 10%);
+        padding: 1em;
+        border-radius: 10px;
+        width: 80vw;
+
+        input {
+            border: none;
+            border-radius: 10px;
+            border-bottom: 1px solid $dark-primary;
+            background-color: $dark-background;
+            color: $dark-text;
+            font-size: $font-size;
+            height: 30px;
+        }
+        .name {
+            width: 100px;
+        }
+        .value {
+            width: 50px;
+        }
+       .day {
+            width: 20px;
+        }
+        input::-webkit-outer-spin-button,
+        input::-webkit-inner-spin-button {
+            -webkit-appearance: none;
+        }
+    }
+}
+
+.light {
+    .form {
+        background-color: rgba($light-primary, 10%);
+
+        input {
+            border-bottom: 1px solid $light-primary;
+            background-color: $light-background;
+            color: $light-text;
+        }
+    }
+}
+
+@media (min-width: 40em) {
+    .add {
+        .form {
+            width: 460px;
+
+            .name {
+                width: 150px;
+            }
+            .value, .day {
+                width: 85px;
+            }
+        }
+    }
+}

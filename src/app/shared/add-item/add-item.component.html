@@ -1,0 +1,40 @@
+<div 
+    class="add"
+    [ngClass]="this.mode.dark ? 'dark' : 'light'"
+>
+    <form class="form">
+        <div>
+            <p>Day</p>
+            <input 
+                class="day"
+                type="number" 
+                min="0"
+                max="30"
+                inputmode="numeric" 
+                pattern="[0-9]*"
+            >
+        </div>
+        <div>
+            <p>Item</p>
+            <input 
+                class="name"
+                type="text"
+            >
+        </div>
+        <div>
+            <p>Value</p>
+            <input 
+                class="value"
+                type="number" 
+                min="0" 
+                inputmode="decimal" 
+                pattern="[0-9]*"
+            >
+        </div>
+        <app-button
+            text="fa-plus"
+            type="icon"
+        >
+        </app-button>
+    </form>
+</div>

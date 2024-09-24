@@ -1,0 +1,28 @@
+<div 
+    class="date"
+    [ngClass]="darkMode()"
+>
+    <mat-form-field class="form">
+        <input matInput [matDatepicker]="dp" [formControl]="date">
+        <mat-datepicker-toggle matIconSuffix [for]="dp"></mat-datepicker-toggle>
+        <mat-datepicker 
+            #dp
+            startView="multi-year"
+            (monthSelected)="setMonthAndYear($event, dp)"
+            [panelClass]="darkMode()"
+        >
+        </mat-datepicker>
+    </mat-form-field>
+    <div>
+        <p>
+            Date
+        </p>
+        <input disabled matInput [value]="valueDate()">
+    </div>
+    <app-button #dp
+        type="icon"
+        text="fa-calendar"
+        mat-raised-button 
+        (click)="dp.open()"
+    ></app-button>
+</div>

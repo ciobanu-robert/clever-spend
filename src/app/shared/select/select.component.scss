@@ -12,12 +12,13 @@
         background-image: none;
         cursor: pointer;
         border-radius: 10px;
-        border: 1px solid $dark-primary;
+        border: none;
+        border-bottom: 1px solid $dark-primary;
         background-color: $dark-background;
         color: $dark-text;
         font-size: $font-size;
         padding: 0 0.5em;
-        height: 25px;
+        height: 30px;
         width: 250px;
     }
 
