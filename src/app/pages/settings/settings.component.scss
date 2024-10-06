@@ -1,0 +1,63 @@
+@import '../../../assets/utilities/colors.scss';
+
+.page {
+    min-height: 100dvh;
+    width: 100dvw;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+
+    .settings {
+        padding: 1em 0 0;
+        margin-bottom: 5.5em;
+
+        .form {
+            display: flex;
+            flex-direction: column;
+            gap: 2em;
+            background-color: rgba($dark-primary, 10%);
+            border-radius: 10px;
+            padding: 1em;
+
+            .section {
+                display: flex;
+                flex-direction: column;
+                gap: 1em;
+
+                .image {
+                    display: flex;
+                    align-items: center;
+                    justify-content: center;
+                    align-self: center;
+                    width: 80px;
+                    height: 80px;
+                    border-radius: 10px;
+                    font-size: 40px;
+                    background-color: rgba($dark-primary, 10%);
+                }
+            }
+        }
+    }
+}
+
+.light {
+    .settings {
+        .form {
+            background-color: rgba($light-primary, 10%);
+            .section {
+                .image {
+                    background-color: rgba($light-primary, 10%);
+                }
+            }
+        }
+    }
+}
+
+@media (min-width: 40em) {
+    .page {
+        .settings {
+            margin-bottom: 7.5em;
+        }
+    }
+}

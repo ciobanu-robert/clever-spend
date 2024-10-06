@@ -1,1 +1,62 @@
-<p>settings works!</p>
+<div 
+    class="page"
+    [ngClass]="this.mode.dark ? 'dark': 'light'"
+>
+    <div class="settings ">
+        <form class="form">
+            <div class="profile section">
+                <h5>Profile</h5>
+
+                <i class="fa-solid fa-user image"></i>
+                <app-input
+                    name="Image"
+                >
+
+                </app-input>
+
+                <app-input 
+                    name="Username"
+                >
+                </app-input>
+            </div>
+
+            <div class="income section">
+                <h5>Income</h5>
+
+                <app-input
+                    name="Earnings"
+                    type="number"
+                >
+                </app-input>
+            
+                <app-input
+                    name="Pay day"
+                    type="number"
+                >
+                </app-input>
+            </div>
+
+            <div class="password section">
+                <h5>Change password</h5>
+
+                <app-input 
+                    name="Password"
+                    type="password"
+                >
+                </app-input>
+
+                <app-input 
+                    name="Confirm password"
+                    type="password"
+                >
+                </app-input>
+            </div>
+
+            <app-button 
+                text="Save"
+                class="button"
+            >
+            </app-button>
+        </form>
+    </div>
+</div>

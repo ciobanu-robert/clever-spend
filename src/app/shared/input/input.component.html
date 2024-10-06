@@ -3,7 +3,21 @@
     [ngClass]="this.mode.dark ? 'dark' : 'light'"
 >
     <p>{{ name }}</p>
-
+    <i 
+        *ngIf="name == 'Pay day'"
+        class="fa-solid fa-calendar-check"
+    >
+    </i>
+    <i 
+        *ngIf="name == 'Earnings'"
+        class="fa-solid fa-money-bill"
+    >
+    </i>
+    <i 
+        *ngIf="name == 'Image'"
+        class="fa-solid fa-image"
+    >
+    </i>
     <i 
         *ngIf="name == 'Username'"
         class="fa-solid fa-user"

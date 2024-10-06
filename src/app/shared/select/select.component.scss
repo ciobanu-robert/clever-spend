@@ -37,7 +37,7 @@
 .light {
     .select {
         select {
-            border: 1px solid $light-primary;
+            border-bottom: 1px solid $light-primary;
             background-color: $light-background;
             color: $light-text;
         }

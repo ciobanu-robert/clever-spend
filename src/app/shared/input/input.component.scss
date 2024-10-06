@@ -27,6 +27,7 @@
 
     input {
         border-radius: 10px;
+        border: none;
         border-bottom: 1px solid $dark-primary;
         background-color: $dark-background;
         color: $dark-text;
@@ -35,11 +36,16 @@
         height: 30px;
         width: 250px;
     }
+
+    input::-webkit-outer-spin-button,
+    input::-webkit-inner-spin-button {
+        -webkit-appearance: none;
+    }
 }
 
 .light {
     input {
-        border: 1px solid $light-primary;
+        border-bottom: 1px solid $light-primary;
         background-color: $light-background;
         color: $light-text;    
     }

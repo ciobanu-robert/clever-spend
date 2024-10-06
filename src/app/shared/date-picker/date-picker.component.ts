@@ -34,6 +34,7 @@ export const MY_FORMATS = {
 export class DatePickerComponent {
   constructor(public mode: DarkModeService) {
   }
+  
   darkMode() {
     if (this.mode.dark == true) {
       return 'dark'

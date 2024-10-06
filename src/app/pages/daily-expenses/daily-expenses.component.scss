@@ -36,21 +36,5 @@
 @media (min-width: 40em) {
     .page {
         gap: 2em;
-
-        .table {
-            margin-bottom: 7.5em;
-    
-            table {
-                width: 460px;
-                th:nth-child(1) {
-                    width: 150px;
-                }
-    
-                th {
-                    width: 100px;
-                }
-            }
-                    
-        }
     }
 }

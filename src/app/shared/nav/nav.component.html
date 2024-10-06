@@ -1,27 +1,9 @@
-<div 
-    class="nav"
-    [ngClass]="this.mode.dark ? 'dark' : 'light'"
->
-    <!-- <h6 
-        routerLink="/home"
-        routerLinkActive="active"
-    >
-        Home
-    </h6>
-    <h6 
-        routerLink="/login"
-        routerLinkActive="active"
-    >
-        Login
-    </h6>
-    <h6
-        routerLink="/register"
-        routerLinkActive="active"
-    >
-        Register
-    </h6> -->
+<div class="nav" [ngClass]="this.mode.dark ? 'dark' : 'light'">
+  <!-- <h6 routerLink="/home" routerLinkActive="active">Home</h6>
+  <h6 routerLink="/login" routerLinkActive="active">Login</h6>
+  <h6 routerLink="/register" routerLinkActive="active">Register</h6> -->
 
-    <h6 
+  <h6 
         routerLink="/fixed"
         routerLinkActive="active"
     >
@@ -42,11 +24,8 @@
         Settings
     </h6>
 
-    <h6 
-        class="active"
-        (click)="this.mode.change()"
-    >
-        <i *ngIf="this.mode.dark" class="fa-solid fa-sun"></i>
-        <i *ngIf="!this.mode.dark" class="fa-solid fa-moon"></i>
-    </h6>
+  <h6 class="active" (click)="this.mode.change()">
+    <i *ngIf="this.mode.dark" class="fa-solid fa-sun"></i>
+    <i *ngIf="!this.mode.dark" class="fa-solid fa-moon"></i>
+  </h6>
 </div>
