@@ -15,6 +15,7 @@ import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { DatePickerComponent } from './date-picker/date-picker.component';
 import { AddItemComponent } from './add-item/add-item.component';
 import { DailyExpensesTableComponent } from './daily-expenses-table/daily-expenses-table.component';
+import { AddExpensesComponent } from './add-expenses/add-expenses.component';
 
 
 @NgModule({
@@ -29,6 +30,7 @@ import { DailyExpensesTableComponent } from './daily-expenses-table/daily-expens
     DatePickerComponent,
     AddItemComponent,
     DailyExpensesTableComponent,
+    AddExpensesComponent,
   ],
   imports: [
     CommonModule,
@@ -51,6 +53,7 @@ import { DailyExpensesTableComponent } from './daily-expenses-table/daily-expens
     DatePickerComponent,
     AddItemComponent,
     DailyExpensesTableComponent,
+    AddExpensesComponent,
   ]
 })
 export class SharedModule { }
