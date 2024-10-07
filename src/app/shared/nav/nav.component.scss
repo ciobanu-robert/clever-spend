@@ -16,21 +16,27 @@
     0px 4px 5px 0px rgba(0, 0, 0, 0.14),
     0px 1px 10px 0px rgba(0, 0, 0, 0.12);
 
-    h6:hover {
-        cursor: pointer;
-    }
-
-    .active {
+    .active, .mode {
+        color: $dark-secondary;
         background-color: $dark-primary;
+        animation: not-hover-active 0.5s ease-in-out forwards;
+        font-weight: bold;
         border-radius: 10px;
         padding: 0.4em;
-        color: rgba($light-secondary, 80%);
-        animation: not-hover-active 0.2s ease-in-out forwards;
-        font-weight: bold;
     }
 
-    .active:hover {
-        animation: hover-active 0.2s ease-in-out forwards;
+    .link {
+        cursor: pointer;
+        padding: 0.4em;
+    }
+
+    .link:hover {
+        border-radius: 10px;
+        animation: hover-link 0.5s ease-in-out forwards;
+    }
+
+    .active:hover, .mode:hover {
+        animation: hover-active 0.5s ease-in-out forwards;
     }
 
     .fa-solid {
@@ -38,51 +44,126 @@
     }
 }
 
+.nav:hover .active {
+    animation: not-hover-active-hover-nav 0.5s ease-in-out forwards;
+}
+
+.nav:hover .active:hover {
+    animation: hover-link 0.5s ease-in-out forwards;
+}
+
+
 .light {
     color: $light-text;
 
-    .active {
+    .active, .mode{
+        color: $light-secondary;
         background-color: $light-primary;
-        color: rgba($light-secondary, 80%);
-        animation: not-hover-active-light 0.2s ease-in-out forwards;
+        animation: not-hover-active-light 0.5s ease-in-out forwards;
     }
-    .active:hover {
-        animation: hover-active-light 0.2s ease-in-out forwards;
+
+    .link:hover {
+        border-radius: 10px;
+        animation: hover-link-light 0.5s ease-in-out forwards;
     }
+
+    .active:hover, .mode:hover {
+        animation: hover-active-light 0.5s ease-in-out forwards;
+    }
+}
+
+.light:hover .active {
+    animation: not-hover-active-hover-nav-light 0.5s ease-in-out forwards;
+}
+
+.light:hover .active:hover {
+    animation: hover-link-light 0.5s ease-in-out forwards;
 }
 
 @keyframes hover-active {
     from {
-        color: rgba($dark-secondary, 80%);
+        color: $dark-secondary;
+        background-color: $dark-primary;
     }
     to {
-        color: $dark-secondary;
+        color: $dark-primary;
+        background-color: $dark-secondary;    
     }
 }
 
 @keyframes not-hover-active {
     from {
-        color: $dark-secondary;
+        color: $dark-primary;
+        background-color: $dark-primary;   
     }
     to {
-        color: rgba($dark-secondary, 80%);
+        color: $dark-secondary;
+        background-color: $dark-primary;    
     }
 }
 
 @keyframes hover-active-light {
     from {
-        color: rgba($light-secondary, 80%);
+        color: $light-secondary;
+        background-color: $light-primary;
     }
     to {
-        color: $light-secondary;
+        color: $light-primary;
+        background-color: $light-secondary;    
     }
 }
 
 @keyframes not-hover-active-light {
     from {
-        color: $light-secondary;
+        color: $light-primary;
+        background-color: $light-secondary;
     }
     to {
-        color: rgba($light-secondary, 80%);
+        color: $light-secondary;
+        background-color: $light-primary;    
+    }
+}
+
+@keyframes not-hover-active-hover-nav {
+    from {
+        color: $dark-secondary;
+        background-color: $dark-primary;
+    }
+    to {
+        color: $dark-text;
+        background-color: transparent;
+    }
+}
+
+@keyframes hover-link {
+    from {
+        color: $dark-text;
+        background-color: transparent;
+    }
+    to {
+        color: $dark-secondary;
+        background-color: $dark-primary;
+    }
+}
+
+@keyframes not-hover-active-hover-nav-light {
+    from {
+        color: $light-secondary;
+        background-color: $light-primary;
+    }
+    to {
+        color: $light-text;
+        background-color: transparent;
+    }
+}
+
+@keyframes hover-link-light {
+    from {
+        color: $light-text;
+        background-color: transparent;
+    }
+    to {
+        color: $light-secondary;
+        background-color: $light-primary;
     }
 }

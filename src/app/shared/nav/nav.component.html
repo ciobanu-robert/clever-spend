@@ -1,4 +1,9 @@
-<div class="nav" [ngClass]="this.mode.dark ? 'dark' : 'light'">
+<div 
+    #nav
+    class="nav" 
+    [ngClass]="this.mode.dark ? 'dark' : 'light'"
+    ng-mouseleave="mouseLeave()"    
+>
   <!-- <h6 routerLink="/home" routerLinkActive="active">Home</h6>
   <h6 routerLink="/login" routerLinkActive="active">Login</h6>
   <h6 routerLink="/register" routerLinkActive="active">Register</h6> -->
@@ -6,6 +11,7 @@
   <h6 
         routerLink="/fixed"
         routerLinkActive="active"
+        class="link"
     >
         Fixed
     </h6>
@@ -13,6 +19,7 @@
     <h6 
         routerLink="/daily"
         routerLinkActive="active"
+        class="link"
     >
         Daily
     </h6>
@@ -20,11 +27,12 @@
     <h6 
         routerLink="/settings"
         routerLinkActive="active"
+        class="link"
     >
         Settings
     </h6>
 
-  <h6 class="active" (click)="this.mode.change()">
+  <h6 class="mode" (click)="this.mode.change()">
     <i *ngIf="this.mode.dark" class="fa-solid fa-sun"></i>
     <i *ngIf="!this.mode.dark" class="fa-solid fa-moon"></i>
   </h6>
