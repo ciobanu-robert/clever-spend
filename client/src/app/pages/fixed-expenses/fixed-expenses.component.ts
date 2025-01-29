@@ -15,13 +15,13 @@ export class FixedExpensesComponent {
     {
       status: 'You',
       image: '',
-      name: 'Robert',
+      name: 'PrtName1',
       income: 2000,
     },
     {
       status: 'Partner',
       image: '',
-      name: 'Alexandra',
+      name: 'PrtName2',
       income: 1500,
     },
   ];

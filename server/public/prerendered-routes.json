@@ -1,0 +1,12 @@
+{
+  "routes": [
+    "/daily",
+    "/fixed",
+    "/home",
+    "/login",
+    "/register",
+    "/reset",
+    "/restore",
+    "/settings"
+  ]
+}

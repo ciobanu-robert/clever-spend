@@ -16,13 +16,13 @@ export class DailyExpensesComponent {
     {
       status: 'You',
       image: '',
-      name: 'Robert',
+      name: 'PrtName1',
       balance: 657,
     },
     {
       status: 'Partner',
       image: '',
-      name: 'Alexandra',
+      name: 'PrtName2',
       balance: 493,
     },
   ];
